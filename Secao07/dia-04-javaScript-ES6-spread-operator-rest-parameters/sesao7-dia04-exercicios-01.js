@@ -25,12 +25,14 @@ const people = [
       nationality: 'Brazilian',
     },
 
-    //Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
-
-    // bornIn: nascido em => 1901
-    ArrayBornIn = (bornIn) => {
-    return people.bornIn > 1901 && < 2000 
-    }
   ];
+
   
-  // escreva filterPeople abaixo
+  //Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
+// escreva filterPeople abaixo
+
+const ArrayBornIn = people.filter((born) => {
+  return born.bornIn >= 1901 && born.bornIn <= 2001 && born.nationality === 'Australian';
+});
+
+console.log(ArrayBornIn);
